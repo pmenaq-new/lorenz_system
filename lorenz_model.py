@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Feb 27 22:12:31 2022
-
-@author: isido
+@author: pmenaq
 """
 
 import numpy as np
@@ -56,13 +55,10 @@ state0 = [1.0, 1.0, 1.0]
 t = np.arange(0.0, final_time, dt)
 states = odeint(Lorenz, state0, t)
 
-
 fig = plt.figure(figsize=plt.figaspect(0.5))
 ax = fig.add_subplot(1, 2, 1, projection='3d')
 p1 = ax.scatter3D(out[:,0], out[:,1], out[:,2], c="k", s=3, alpha=0.5)
 p1 = ax.plot3D(out[:,0], out[:,1], out[:,2], 'gray')
 ax = fig.add_subplot(1, 2, 2, projection='3d')
-p2=ax.scatter3D(out[:,0], out[:,1], out[:,2], c="k", s=3, alpha=0.5)
-p2=ax.plot3D(out[:,0], out[:,1], out[:,2], 'gray')
-
-
+p2 = ax.scatter3D(out[:,0], out[:,1], out[:,2], c="k", s=3, alpha=0.5)
+p2 = ax.plot3D(out[:,0], out[:,1], out[:,2], 'gray')
